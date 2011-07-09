@@ -16,6 +16,16 @@ class H_lokasi_model extends CI_Model {
         }
     }
 
+    function get_lokasi() {
+
+        $result = $this->db->get('h_lokasi');
+        if ($result->num_rows() > 0) {
+            return $result->result_array();
+        } else {
+            return array();
+        }
+    }
+
     function get_one($id) {
         $this->db->where('id', $id);
         $result = $this->db->get('h_lokasi');
@@ -26,28 +36,16 @@ class H_lokasi_model extends CI_Model {
         }
     }
 
-    function insert() {
-           $data = array(
-        
-            'latitude' => $this->input->post('latitude', TRUE),
-           
-            'longitude' => $this->input->post('longitude', TRUE),
-           
-            'nama_tempat' => $this->input->post('nama_tempat', TRUE),
-           
-        );
+    function insert($data) {
+
         $this->db->insert('h_lokasi', $data);
     }
 
     function update($id) {
         $data = array(
-         
-       'latitude' => $this->input->post('latitude', TRUE),
-       
-       'longitude' => $this->input->post('longitude', TRUE),
-       
-       'nama_tempat' => $this->input->post('nama_tempat', TRUE),
-       
+            'latitude' => $this->input->post('latitude', TRUE),
+            'longitude' => $this->input->post('longitude', TRUE),
+            'nama_tempat' => $this->input->post('nama_tempat', TRUE),
         );
         $this->db->where('id', $id);
         $this->db->update('h_lokasi', $data);
@@ -59,6 +57,7 @@ class H_lokasi_model extends CI_Model {
             $this->db->delete('h_lokasi');
         }
     }
+   
 
 }
 ?>

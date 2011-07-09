@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>960 Grid System &mdash; Demo</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/text.css" />
+        <link rel="stylesheet" href="css/960_24_col.css" />
+
+        <link rel="stylesheet" href="css/style.css" />
+        <!--script js-->
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/jquery.roundabout-1.0.min.js"></script> 
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.roundabout-shapes-1.1.js"></script>
+
+        <script type="text/javascript">
+            
+            $(document).ready(function() { //Start up our Project Preview Carosuel
+                $('ul#folio_scroller').roundabout({
+                    easing: 'easeOutInCirc',
+                    shape: 'waterWheel',
+                    duration: 600
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+        <div class="container_24">
+            <div class="grid_24">
+                <div id="header">
+                    <h3>JMC</h3>
+                </div>
+                <div id="menu_top">
+                    <div class="menutop"><a href="#" title="Home"> Home</a></div>
+                    <div class="menutop"><a href="#" title="about"> About </a></div>
+                    <div class="menutop"> <a href="#"  title="Portofolio">Portofolio</a></div>
+                    <div class="menutop"><a href="#" title="client"> Client</a></div>
+                    <div class="menutop"> <a href="#" title="Contact">Contact</a></div>
+
+                </div>
+            </div>
+
+
+            <div class="grid_10" >
+                <h4>Lorem Ipsum</h4>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type
+                    specimen book. It has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It was popularized in the
+                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                    with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+            <div class="grid_14 clearfix">
+                <div id="folio_scroller_container" >
+                    <ul id="folio_scroller"> 
+                        <li ><span>Homepage</span><a href="#"><img alt="" src="images/600x300.gif" /></a></li> 
+                        <li ><span>Content Page</span><a href="#"><img alt="" src="images/600x300.gif" /></a></li> 
+                        <li ><span>Dropdown Menu</span><a href="#"><img alt="" src="images/600x300.gif" /></a></li> 
+
+                    </ul> 
+                </div>
+            </div>
+            <div class="clear"></div>
+
+            <div class="grid_24 footer">
+                &copy; puji rahmadiyanto design<br>
+                JOGJA MEDIA CENTER<br>
+                Jl. Magelang Km.5 Kutu Dukuh Ruko No.3 Selokan Mataram<br>
+                Yogyakarta
+            </div>
+
+            <!-- end .grid_12.pull_12 -->
+            <div class="clear"></div>
+        </div>
+        <!-- end .container_24 -->
+    </body>
+</html>
